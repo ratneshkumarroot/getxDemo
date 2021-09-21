@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+
+void main() => runApp(GetMaterialApp(home: Home(),
+debugShowCheckedModeBanner: false,
+));
+class Controller extends GetxController{
+  var count = 0.obs;
+  var name = 'Jonatas Borges'.obs;
+  increment() => count++;
+  changeTheme()=>Get.changeTheme(Get.isDarkMode? ThemeData.light(): ThemeData.dark());
+
+}
+class Home extends StatelessWidget {
+
+  @override
+  Widget build(context) {
+
+    // Instantiate your class using Get.put() to make it available for all "child" routes there.
+    final Controller c = Get.put(Controller());
+
+    return Scaffold(
+      // Use Obx(()=> to update Text() whenever count is changed.
+        appBar: AppBar(title: Obx(() => Text("Clicks: ${c.name} ${c.count}"))),
+
+        // Replace the 8 lines Navigator.push by a simple Get.to(). You don't need context
+        body: Column(
+          children: [
+            Center(child: ElevatedButton(
+                child: Text("Go to Other"), onPressed: () => Get.to(Other()))),
+
+            FloatingActionButton(child: Icon(Icons.add), onPressed: c.increment),
+            FloatingActionButton(child: Icon(Icons.add), onPressed: c.changeTheme)
+          ],
+        ),
+       );
+  }
+}
+
+class Other extends StatelessWidget {
+  // You can ask Get to find a Controller that is being used by another page and redirect you to it.
+  final Controller c = Get.find();
+
+  @override
+  Widget build(context){
+    // Access the updated count variable
+    return Scaffold(body: Center(child: Text("${c.count}")));
+  }
+}

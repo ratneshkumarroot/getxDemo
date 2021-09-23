@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "375800638825",
+    "firebase_url": "https://tahaddi-2ec31.firebaseio.com",
+    "project_id": "tahaddi-2ec31",
+    "storage_bucket": "tahaddi-2ec31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:375800638825:android:2ca249ae33464fa00321f8",
+        "android_client_info": {
+          "package_name": "tahaddi.root.com.notification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "375800638825-d32hos052vvblkc92ladc6vtueef32kr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tahaddi.root.com.notification",
+            "certificate_hash": "d23cab8446b0e448212cf1b9ee0913641ad18ba2"
+          }
+        },
+        {
+          "client_id": "375800638825-hqoh4sci7qouvklt24rq7noql81214l0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tahaddi.root.com.notification",
+            "certificate_hash": "61651b228ee90ab2ca5375cf4bee7425f3b28b9a"
+          }
+        },
+        {
+          "client_id": "375800638825-n3703s18ivnu77u6e9sfkkcmq7tlkb7v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlGUm9_B13HwoG2_Qevp49PDUa7euG-lI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "375800638825-n3703s18ivnu77u6e9sfkkcmq7tlkb7v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

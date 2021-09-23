@@ -1,9 +1,15 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_demo_app/streamBuilder.dart';
 
-void main() => runApp(GetMaterialApp(home: Home(),
+void main() async{ runApp(
+
+GetMaterialApp(home: Home(),
 debugShowCheckedModeBanner: false,
 ));
+await Firebase.initializeApp();}
+
 class Controller extends GetxController{
   var count = 0.obs;
   var name = 'Jonatas Borges'.obs;
@@ -27,9 +33,9 @@ class Home extends StatelessWidget {
         body: Column(
           children: [
             Center(child: ElevatedButton(
-                child: Text("Go to Other"), onPressed: () => Get.to(Other()))),
+                child: Text("Go to Other"), onPressed: () => Get.to(FlutterStreamBuilder()))),
 
-            FloatingActionButton(child: Icon(Icons.add), onPressed: c.increment),
+            //FloatingActionButton(child: Icon(Icons.add), onPressed: c.increment),
             FloatingActionButton(child: Icon(Icons.add), onPressed: c.changeTheme)
           ],
         ),
@@ -37,13 +43,13 @@ class Home extends StatelessWidget {
   }
 }
 
-class Other extends StatelessWidget {
-  // You can ask Get to find a Controller that is being used by another page and redirect you to it.
-  final Controller c = Get.find();
-
-  @override
-  Widget build(context){
-    // Access the updated count variable
-    return Scaffold(body: Center(child: Text("${c.count}")));
-  }
-}
+// class Other extends StatelessWidget {
+//   // You can ask Get to find a Controller that is being used by another page and redirect you to it.
+//   final Controller c = Get.find();
+//
+//   @override
+//   Widget build(context){
+//     // Access the updated count variable
+//     return Scaffold(body: Center(child: Text("${c.count}")));
+//   }
+// }

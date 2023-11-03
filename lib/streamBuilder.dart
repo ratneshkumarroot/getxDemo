@@ -5,7 +5,7 @@ import 'package:getx_demo_app/repository/fireStore.dart';
 import 'modelClass/dataReceive.dart';
 
 class FlutterStreamBuilder extends StatelessWidget {
-  final FireStore _fire_Store = FireStore();
+
   double _height=0.0;
   double _width=0.0;
 
@@ -63,12 +63,12 @@ class FlutterStreamBuilder extends StatelessWidget {
 
               ),
               onPressed: () async{
-                valueData=  await _fire_Store.getData();
-                if (valueData.isNotEmpty) {
-                  imgStream.sink.add(valueData);
-                } else {
-                  imgStream.close();
-                }
+                // valueData=  await _fire_Store.getData();
+                // if (valueData.isNotEmpty) {
+                //   imgStream.sink.add(valueData);
+                // } else {
+                //   imgStream.close();
+                // }
 
               },
 

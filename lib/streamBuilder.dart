@@ -8,7 +8,6 @@ class FlutterStreamBuilder extends StatelessWidget {
 
   double _height=0.0;
   double _width=0.0;
-
   final imgStream = StreamController<List<Book>>();
   List<Book> valueData=[];
   int Counter = -1;
